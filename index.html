@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Iglesia el buen camino | Iglesia Cristiana </title>
+    <meta name="description" content="Iglesia Esperanza y Vida - Comunidad cristiana en San Salvador. Cultos dominicales, eventos, oración y servicio comunitario. Ven y forma parte de nuestra familia de fe.">
+    <meta name="keywords" content="iglesia, iglesia cristiana, iglesia el salvador, culto dominical, oración, eventos cristianos, comunidad de fe, iglesia evangélica, El Salvador">
+    <meta name="author" content="Iglesia El buen camino MI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-sitio.netlify.app">
+    <meta property="og:title" content="Iglesia Esperanza y Vida | Iglesia Cristiana en San Salvador">
+    <meta property="og:description" content="Comunidad cristiana en San Salvador. Cultos dominicales, eventos, oración y servicio comunitario.">
+    <meta property="og:image" content="https://tu-sitio.netlify.app/iglesia-imagen.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tu-sitio.netlify.app">
+    <meta property="twitter:title" content="Iglesia Esperanza y Vida | Iglesia Cristiana en San Salvador">
+    <meta property="twitter:description" content="Comunidad cristiana en San Salvador. Cultos dominicales, eventos, oración y servicio comunitario.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tu-sitio.netlify.app">
+    
+    <!-- Schema.org para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Iglesia Esperanza y Vida",
+      "description": "Comunidad cristiana comprometida con el amor de Cristo y el servicio a nuestros hermanos",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Principal #123",
+        "addressLocality": "San Salvador",
+        "addressRegion": "San Salvador",
+        "addressCountry": "SV"
+      },
+      "telephone": "(503) 2222-3333",
+      "email": "info@iglesiaesperanza.org",
+      "url": "https://tu-sitio.netlify.app",
+      "sameAs": [
+        "https://facebook.com/iglesiaesperanza",
+        "https://instagram.com/iglesiaesperanza"
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.8rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e74c3c;
+        }
+
+  
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-item a:hover {
+            background: rgba(231, 76, 60, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            margin-top: 80px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #f8f9fa;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            animation: slideInRight 1s ease-out;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><circle fill="%23764ba2" cx="300" cy="150" r="100" opacity="0.3"/><circle fill="%23667eea" cx="900" cy="450" r="150" opacity="0.2"/></svg>');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .about-content {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        /* Events Section */
+        .events {
+            background: #f8f9fa;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .event-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .event-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .event-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .event-btn {
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .event-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Location Section */
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .location-text {
+            text-align: center;
+        }
+
+        .location-phrase {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .location-address {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .location-address h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .map-container {
+            background: #e9ecef;
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 15px;
+        }
+
+        /* Other Churches Section */
+        .other-churches {
+            background: #f8f9fa;
+        }
+
+        .churches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .church-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .church-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .church-image {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .church-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .church-name {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .church-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Touch-friendly buttons */
+        .event-btn, .carousel-btn {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        /* Responsive Design Complete */
+        @media (max-width: 1024px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero-container {
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #2c3e50, #34495e);
+                flex-direction: column;
+                gap: 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-item a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                text-align: center;
+                min-height: 44px;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 2rem 1rem;
+                margin-top: 70px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-description {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .carousel-container {
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+
+            .carousel-item {
+                height: 300px;
+            }
+
+            .carousel-btn {
+                padding: 0.8rem;
+                font-size: 1rem;
+            }
+
+            .prev { left: 10px; }
+            .next { right: 10px; }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .event-card {
+                margin: 0 0.5rem;
+            }
+
+            .event-image {
+                height: 180px;
+            }
+
+            .event-title {
+                font-size: 1.2rem;
+            }
+
+            .event-description {
+                font-size: 0.95rem;
+            }
+
+            .location-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .location-phrase {
+                font-size: 1.2rem;
+                padding: 0 1rem;
+            }
+
+            .location-address {
+                margin: 0 1rem;
+                padding: 1.5rem;
+            }
+
+            .map-container {
+                height: 300px;
+                margin: 0 1rem;
+            }
+
+            .churches-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .church-card {
+                margin: 0 1rem;
+            }
+
+            .church-image {
+                height: 120px;
+            }
+
+            .church-name {
+                font-size: 1.1rem;
+            }
+
+            .church-description {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .about-description {
+                font-size: 1rem;
+            }
+
+            .carousel-item {
+                height: 250px;
+            }
+
+            .event-content,
+            .church-content {
+                padding: 1rem;
+            }
+
+            .location-address {
+                padding: 1rem;
+            }
+
+            .location-address h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+
+            .logo-img {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .event-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Landscape phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                height: auto;
+                min-height: 70vh;
+                padding: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <img src="logo.jpeg" alt="Logo Iglesia" class="logo-img">
+                Iglesia EEl buen camino MI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+                <li class="nav-item"><a href="#sobre-nosotros" onclick="closeMobileMenu()">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="#eventos" onclick="closeMobileMenu()">Nuestros Eventos</a></li>
+                <li class="nav-item"><a href="#ubicacion" onclick="closeMobileMenu()">Ubicación</a></li>
+                <li class="nav-item"><a href="#otras-iglesias" onclick="closeMobileMenu()">Otras Iglesias</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Bienvenidos a Nuestra Casa de Oración</h1>
+                <p class="hero-subtitle">"Irán de poder en poder; Verán a Dios en Sion. " - salmos 84:5</p>
+            </div>
+            <div class="hero-image">
+                <img src="portada.jpeg" alt="Iglesia Esperanza y Vida - Comunidad Cristiana en San Salvador">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="section about">
+        <h2 class="section-title">Sobre Nosotros - Iglesia Cristiana</h2>
+        <div class="about-content">
+            <p class="about-description">
+                Somos una <strong>iglesia cristiana</strong> comprometida con el amor de Cristo y el servicio a nuestros hermanos en <strong>San Salvador</strong>. 
+                Nuestra misión es predicar el evangelio, fortalecer la fe de nuestros miembros y ser una luz 
+                en nuestra comunidad. Creemos en la importancia de la <strong>oración</strong>, la <strong>adoración</strong> y el compañerismo cristiano.
+            </p>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.51.00\ PM.jpeg')"></div>
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.51.32\ PM.jpeg')"></div>
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.51.34\ PM.jpeg')"></div>
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.51.47\ PM.jpeg')"></div>
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.53.14\ PM.jpeg')"></div>
+                <div class="carousel-item" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.53.15\ PM.jpeg')"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+            <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="eventos" class="section events">
+        <h2 class="section-title">Nuestros Eventos</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 2.53.15\ PM.jpeg')"></div>
+                <div class="event-content">
+                    <h3 class="event-title">Culto Dominical</h3>
+                    <p class="event-description">Únete a nosotros cada domingo para un tiempo de adoración, predicación de la Palabra y comunión. Un momento especial para fortalecer tu fe.</p>
+                    <br>
+                    <p>Hora:9:00 AM</p>
+                    <a href="https://wa.me/50373989354?text=Hola,%20me%20interesa%20información%20sobre%20el%20Culto%20Dominical" class="event-btn" target="_blank">Más Información</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image" style="background-image: url('descarga.jpg')"></div>
+                <div class="event-content">
+                    <h3 class="event-title">Lunes de Oración</h3>
+                    <p class="event-description">Cada lunes nos reunimos para orar por nuestra comunidad, familias y necesidades especiales. Un tiempo íntimo con Dios.</p>
+                    <br>
+                    <p>Horario: 5:00 PM</p>
+                    <a href="https://wa.me/50373989354?text=Hola,%20me%20interesa%20información%20sobre%20los%20Lunes%20de%20Oración" class="event-btn" target="_blank">Más Información</a>
+                </div>
+            </div>
+
+             <div class="event-card">
+                <div class="event-image" style="background-image: url('jovenes.jpeg')"></div>
+                <div class="event-content">
+                    <h3 class="event-title">martes cuto de jovenes</h3>
+                    <p class="event-description">Cada martes se reunen los jovenes para aser un culto dirigidos por los jovenes</p>
+                    <br>
+                    <p>hora: 5:00 PM</p>
+                    <a href="https://wa.me/50373989354?text=Hola,%20me%20interesa%20información%20sobre%20el%20Culto%20de%20Jóvenes" class="event-btn" target="_blank">Más Información</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image" style="background-image: url('mujeres.jpeg')"></div>
+                <div class="event-content">
+                    <h3 class="event-title">Culto de damas</h3>
+                    <p class="event-description">Cada miércoles nos reunimos en un culto dirigido por las damas de la iglesia.</p>
+                    <br>
+                    <p>Hora: 4:30 PM</p>
+                    <a href="https://wa.me/50373989354?text=Hola,%20me%20interesa%20información%20sobre%20el%20Culto%20de%20Damas" class="event-btn" target="_blank">Más Información</a>
+                </div>
+            </div>
+
+             <div class="event-card">
+                <div class="event-image" style="background-image: url('WhatsApp\ Image\ 2025-07-27\ at\ 3.41.29\ PM.jpeg')"></div>
+                <div class="event-content">
+                    <h3 class="event-title">vierns culto de caballeros</h3>
+                    <p class="event-description">Cada viernes se reunen los caballros de la iglesias para dirigir un culto poderoo guidos de la mano de Dios.</p>
+                    <br>
+                    <p>Hora: 4:00 PM</p>
+                    <a href="https://wa.me/50373989354?text=Hola,%20me%20interesa%20información%20sobre%20el%20Culto%20de%20Caballeros" class="event-btn" target="_blank">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="section">
+        <h2 class="section-title">Ubicación</h2>
+        <div class="location-container">
+            <div class="location-text">
+                <p class="location-phrase">"Vengan a mi casa de oración, donde todos son bienvenidos"</p>
+                <div class="location-address">
+                    <h3>📍 Nuestra Dirección</h3>
+                    <p>caton las delicias<br>
+                    caserio apacunque<br>
+                    San Migel, El Salvador<br><br>
+                    📞 Teléfono: (503) 7398-9354<br>
+                   
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.48589076570832!2d-88.12471336744994!3d13.488003579191925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ad455d16e5e5b%3A0x5ebefd1c0e3e0412!2sIglesia%20de%20Dios%20canton%20las%20delicias!5e0!3m2!1ses-419!2ssv!4v1753655563420!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Churches Section -->
+   <!-- <section id="otras-iglesias" class="section other-churches">
+        <h2 class="section-title">Otras Iglesias</h2>
+        <div class="churches-grid">
+            <div class="church-card">
+                <div class="church-image" style="background-image: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 150\'><rect fill=\'%23e74c3c\' width=\'300\' height=\'150\'/><polygon fill=\'%23fff\' points=\'150,30 120,80 180,80\'/><rect fill=\'%23fff\' x=\'140\' y=\'80\' width=\'20\' height=\'50\'/></svg>')"></div>
+                <div class="church-content">
+                    <h3 class="church-name">Iglesia Emanuel</h3>
+                    <p class="church-description">Una comunidad vibrante dedicada al servicio y la evangelización. Ubicada en Santa Tecla, ofrece múltiples ministerios para toda la familia.</p>
+                </div>
+            </div>
+
+            <div class="church-card">
+                <div class="church-image" style="background-image: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 150\'><rect fill=\'%23f39c12\' width=\'300\' height=\'150\'/><polygon fill=\'%23fff\' points=\'150,30 120,80 180,80\'/><rect fill=\'%23fff\' x=\'140\' y=\'80\' width=\'20\' height=\'50\'/></svg>')"></div>
+                <div class="church-content">
+                    <h3 class="church-name">Iglesia Roca de Salvación</h3>
+                    <p class="church-description">Enfocada en la adoración contemporánea y el discipulado. Con sede en Antiguo Cuscatlán, cuenta con programas especiales para jóvenes y familias.</p>
+                </div>
+            </div>
+
+            <div class="church-card">
+                <div class="church-image" style="background-image: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 150\'><rect fill=\'%23667eea\' width=\'300\' height=\'150\'/><polygon fill=\'%23fff\' points=\'150,30 120,80 180,80\'/><rect fill=\'%23fff\' x=\'140\' y=\'80\' width=\'20\' height=\'50\'/></svg>')"></div>
+                <div class="church-content">
+                    <h3 class="church-name">Iglesia Fuente de Vida</h3>
+                    <p class="church-description">Reconocida por su trabajo social y comunitario. Ubicada en Soyapango, desarrolla proyectos de ayuda social y educación cristiana.</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <script>
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(event.target) && !mobileBtn.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 4000);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.animationDelay = `${index * 0.2}s`;
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe event cards
+        document.querySelectorAll('.event-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95))';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #2c3e50, #34495e)';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
